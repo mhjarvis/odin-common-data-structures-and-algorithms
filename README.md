@@ -9,5 +9,5 @@ This repository includes the following projects for The Odin Project:
 [Project: Knights Travails](https://www.theodinproject.com/lessons/javascript-knights-travails)
 
 N
-
+N
 
