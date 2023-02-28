@@ -1,7 +1,5 @@
 console.log('hello');
 
-const list = new LinkedList();
-
 class LinkedList {
   constructor() {
     this.listHead = null;
@@ -13,8 +11,6 @@ class LinkedList {
 
 }
 
-
-
 class Node {
   constructor(value) {
     this.value = null;
@@ -23,3 +19,5 @@ class Node {
 }
 
 console.log("hello")
+
+const list = new LinkedList();
