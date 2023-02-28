@@ -7,12 +7,8 @@ class LinkedList {
 
 
 class Node {
-  constructor() {
-    value = null;
-    nextNode = null;
+  constructor(value) {
+    this.value = null;
+    this.nextNode = null;
   }
-
-  
-  
-
 }
