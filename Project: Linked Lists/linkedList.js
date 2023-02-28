@@ -1,9 +1,16 @@
 console.log('hello');
 
+const list = new LinkedList();
+
 class LinkedList {
   constructor() {
     this.listHead = null;
   }
+
+  append(value) {
+
+  }
+
 }
 
 
@@ -14,3 +21,5 @@ class Node {
     this.nextNode = null;
   }
 }
+
+console.log("hello")
