@@ -1,8 +1,8 @@
-console.log('hello');
+console.log('Start...\n\n');
 
 class LinkedList {
   constructor() {
-    this.listHead = null;
+    this.head = null;
   }
 
   append(value) {
@@ -18,6 +18,9 @@ class Node {
   }
 }
 
-console.log("hello")
+
 
 const list = new LinkedList();
+
+console.log(list);
+console.log("\n\nEnd...")
