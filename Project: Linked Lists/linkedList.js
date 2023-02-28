@@ -1,4 +1,4 @@
-console.log('Start...\n\n');
+console.log('Start...\n\n----------');
 
 class LinkedList {
   constructor() {
@@ -6,7 +6,16 @@ class LinkedList {
   }
 
   append(value) {
+    if(this.head == null) {
 
+    } else {
+      let temp = this.head;
+      
+      while(temp.nextNode != null) {
+        temp = temp.nextNode;
+        temp.nextNode = new Node(value);
+      }
+    }
   }
 
 }
@@ -22,5 +31,7 @@ class Node {
 
 const list = new LinkedList();
 
-console.log(list);
-console.log("\n\nEnd...")
+list.append('First Item');
+
+console.log(list.toString());
+console.log("----------\n\nEnd...")
