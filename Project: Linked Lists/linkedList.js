@@ -1,7 +1,9 @@
 console.log('hello');
 
 class LinkedList {
-  constructor() {}
+  constructor() {
+    this.listHead = null;
+  }
 }
 
 
