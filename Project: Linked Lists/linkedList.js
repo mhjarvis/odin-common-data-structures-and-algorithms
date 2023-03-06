@@ -55,6 +55,7 @@ class LinkedList {
   }
 
   // Add a value to the front of the list
+  // Big O of prepend() is O(1)
   prepend(data) {
     let node = new ListNode(data);
     node.next = this.root;
@@ -62,6 +63,8 @@ class LinkedList {
   }
 
   // Return a string, representing the list
+  // Big O of toString() is O(N) linear time (takes as long to execute as there
+  // are items in the list)
   toString() {
     let result = 'root -> ';
     let current = this.root;
@@ -79,8 +82,15 @@ class LinkedList {
   }
 
   // Return the size of the list
+  // O(N) linear time
   length() {
-
+    let current = this.root;
+    let count = 0;
+    while (current !== null) {
+      count++;
+      current = current.next;
+    }
+    return count;
   }
 
 
@@ -96,6 +106,7 @@ list.prepend(34);
 list.prepend(483);
 
 console.log(list.toString());
+console.log('Length of this list: ' + list.length());
 
 
 
