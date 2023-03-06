@@ -1,4 +1,5 @@
-console.log("----- LINKED LIST -----\n");
+console.log("\nPRINT THE MANUALLY BUILT LINKED LIST");
+console.log("--------------------------------------")
 // There will be two classes to a linked list
 
 // The first class will be the node class which holds the information
@@ -23,12 +24,23 @@ let n3 = new ListNode(135);
 n1.next = n2;
 n2.next = n3;
 
-// At this point we have a linked list
+// At this point we can print our linked list
 
 console.log(n1);
 
+// We can create a function that will print the linked list using only their values:
 
+function printList(node) {
+  let current = node;
+  while (current != null) {
+    console.log(current.data);
+    current = current.next;
+  }
+}
 
+console.log('\nPRINT A READABLE LINKED LIST')
+console.log("--------------------------------------")
+console.log(printList(n1));
 
 
 
