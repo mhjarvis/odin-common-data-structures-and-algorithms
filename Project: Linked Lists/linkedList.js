@@ -45,7 +45,6 @@ console.log('\nPRINT A READABLE LINKED LIST')
 console.log("--------------------------------------")
 console.log(printList(n1));
 
-
 // This class represents the entire list of nodes
 // This class has a property 'root' that represents only the first node in the list
 // This class has methods that operate over the list from root
@@ -56,8 +55,22 @@ class LinkedList {
   }
 
   // Add a value to the front of the list
-  prepend() {
+  prepend(data) {
+    let node = new ListNode(data);
+    node.next = this.root;
+    this.root = node;
+  }
 
+  // Return a string, representing the list
+  toString() {
+    let result = 'root -> ';
+    let current = this.root;
+    while (current !== null) {
+      result += current.data + ' -> ';
+      current = current.next;
+    }
+
+    return result + " null";
   }
 
   // Add  value to the end of the list
@@ -70,13 +83,19 @@ class LinkedList {
 
   }
 
-  // Return a string, representing the list
-  toString() {
-    
-  }
+
 }
 
+console.log('\nPRINT APPENED VALUES USING toString()')
+console.log("--------------------------------------")
 
+let list = new LinkedList();
+list.prepend(5);
+list.prepend(545);
+list.prepend(34);
+list.prepend(483);
+
+console.log(list.toString());
 
 
 
