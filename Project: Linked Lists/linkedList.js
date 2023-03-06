@@ -54,6 +54,12 @@ class LinkedList {
     this.root = null;
   }
 
+  // Return true or false if there are any nodes in the list
+  // O(1) constant time
+  isEmpty() {
+    return this.root === null;
+  }
+
   // Add a value to the front of the list
   // Big O of prepend() is O(1)
   prepend(data) {
@@ -98,6 +104,8 @@ class LinkedList {
 
 console.log('\nPRINT APPENED VALUES USING toString()')
 console.log("--------------------------------------")
+
+// Let prepend a few items to create a list and then print the list and length
 
 let list = new LinkedList();
 list.prepend(5);
