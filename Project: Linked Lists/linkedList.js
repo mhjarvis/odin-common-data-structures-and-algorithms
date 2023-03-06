@@ -47,10 +47,32 @@ console.log(printList(n1));
 
 
 // This class represents the entire list of nodes
+// This class has a property 'root' that represents only the first node in the list
+// This class has methods that operate over the list from root
 
 class LinkedList {
   constructor() {
     this.root = null;
+  }
+
+  // Add a value to the front of the list
+  prepend() {
+
+  }
+
+  // Add  value to the end of the list
+  apend() {
+
+  }
+
+  // Return the size of the list
+  length() {
+
+  }
+
+  // Return a string, representing the list
+  toString() {
+    
   }
 }
 
