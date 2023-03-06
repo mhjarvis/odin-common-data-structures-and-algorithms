@@ -5,6 +5,9 @@ console.log("--------------------------------------")
 // The first class will be the node class which holds the information
 // for each individual link
 
+// This class is simple and models the node
+// This class does not have methods in it.
+
 class ListNode {
   constructor(data, next = null) {
     this.data = data;
@@ -41,6 +44,50 @@ function printList(node) {
 console.log('\nPRINT A READABLE LINKED LIST')
 console.log("--------------------------------------")
 console.log(printList(n1));
+
+
+// This class represents the entire list of nodes
+
+class LinkedList {
+  constructor() {
+    this.root = null;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
