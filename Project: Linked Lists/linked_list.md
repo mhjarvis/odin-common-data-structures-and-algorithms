@@ -11,3 +11,5 @@ A head node is the first node in the list, a tail node is the last node in the l
 
     [ NODE(head) ] -> [ NODE ] -> [ NODE(tail) ] -> null
 
+
+
