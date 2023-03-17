@@ -19,4 +19,4 @@ There are two classes. LinkedList is the class that represents the entire linked
     class LinkedList                                // represents the full list with all functions that act on that list
 
     isEmpty()                                       // function checks if there are any nodes in the list
-    prepend(data)                                   // fucntion that adds a value to the front of the list (making it the root node)
+    prepend(data)                                   // fucntion that adds a value to the front of the list (making it root node)
