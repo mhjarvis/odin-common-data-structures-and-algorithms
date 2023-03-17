@@ -111,13 +111,13 @@ class LinkedList {
 
 }
 
-console.log('\nPRINT PREPEND VALUES USING toString()')
-console.log("--------------------------------------")
+console.log('\nPRINT PREPEND VALUES USING toString()');
+console.log("--------------------------------------");
 
 // Let prepend a few items to create a list and then print the list and length
 
 let list = new LinkedList();
-console.log
+console.log('...prepending 5, 545, and 34 to the list');
 list.prepend(5);
 list.prepend(545);
 list.prepend(34);
@@ -127,11 +127,14 @@ console.log('Length of this list: ' + list.length());
 
 // Appending a value and printing the new linked list
 console.log('\nPRINT LINKED LIST WITH APPENDED VALUES');
-console.log('...apending 77 to the list and printing...')
+console.log("--------------------------------------");
+
+console.log('...apending 77 to the list and printing...');
 
 list.apend(77);
 
 console.log(list.toString());
+console.log('Length of this list: ' + list.length());
 
 
 
