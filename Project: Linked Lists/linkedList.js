@@ -83,8 +83,17 @@ class LinkedList {
   }
 
   // Add  value to the end of the list
-  apend() {
-
+  apend(data) {
+    let node = new ListNode(data);
+    let current = this.root;
+    while (current !== null) {
+      if (current.next === null) {
+        current.next = node;
+        node.next = null;
+        return;
+      }
+      current = current.next;
+    }
   }
 
   // Return the size of the list
@@ -102,22 +111,27 @@ class LinkedList {
 
 }
 
-console.log('\nPRINT APPENED VALUES USING toString()')
+console.log('\nPRINT PREPEND VALUES USING toString()')
 console.log("--------------------------------------")
 
 // Let prepend a few items to create a list and then print the list and length
 
 let list = new LinkedList();
+console.log
 list.prepend(5);
 list.prepend(545);
 list.prepend(34);
-list.prepend(483);
 
 console.log(list.toString());
 console.log('Length of this list: ' + list.length());
 
+// Appending a value and printing the new linked list
+console.log('\nPRINT LINKED LIST WITH APPENDED VALUES');
+console.log('...apending 77 to the list and printing...')
 
+list.apend(77);
 
+console.log(list.toString());
 
 
 

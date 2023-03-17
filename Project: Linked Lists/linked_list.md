@@ -15,8 +15,11 @@ A head node is the first node in the list, a tail node is the last node in the l
 
 There are two classes. LinkedList is the class that represents the entire linked list, and includes all the functions that act upon that list. ListNode is the class that creates the individual objects that hold the appropriate information of each node element.
 
-    class ListNode                                  // holds each individual Node's data and the link to the next node
-    class LinkedList                                // represents the full list with all functions that act on that list
+    class ListNode              // holds each individual Node's data and the link to the next node
+    class LinkedList            // represents the full list with all functions that act on that list
 
-    isEmpty()                                       // function checks if there are any nodes in the list
-    prepend(data)                                   // fucntion that adds a value to the front of the list (making it root node)
+    isEmpty()                   // function checks if there are any nodes in the list
+    prepend(data)               // fucntion that adds a value to the front of the list (making it root node)
+    toString()                  // return a string of the linked list
+    append(data)                //
+    length()                    // return the size of the linked list
