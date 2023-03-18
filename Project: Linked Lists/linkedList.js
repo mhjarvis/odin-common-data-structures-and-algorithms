@@ -121,6 +121,15 @@ class LinkedList {
     }
     return current;
   }
+
+  at(index) {
+    let count = 0;
+    let current = this.root;
+    while(count != index) {
+      current = current.next;
+    }
+    return current;
+  }
 }
 
 console.log('\n3. PRINT PREPEND VALUES USING toString()');
