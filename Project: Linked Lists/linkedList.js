@@ -114,7 +114,9 @@ class LinkedList {
   }
 
   // function to return the tail of the linked list
-  
+  tail() {
+    
+  }
 }
 
 console.log('\n3. PRINT PREPEND VALUES USING toString()');
@@ -154,6 +156,7 @@ console.log('\n5. PRINT THE TAIL ELEMENT OF THE LINKED LIST')
 console.log("--------------------------------------");
 
 console.log('...printing the tail element...');
+
 
 
 
