@@ -157,6 +157,28 @@ class LinkedList {
     }
     return false;
   }
+
+  find(value) {
+    let current = this.root;
+    let count = 0;
+
+    if (current.data === value) {
+      console.log('Found at index: ' + count );
+      return;
+    }
+
+    while(current.next !== null) {
+      current = current.next;
+      count++;
+      
+      if (current.data === value) {
+        console.log('Found at index: ' + count);
+        return;
+      }
+    }
+    console.log('Value not found in list.')
+    return;
+  }
 }
 
 console.log('\n3. PRINT PREPEND VALUES USING toString()');
@@ -236,7 +258,14 @@ console.log();
 console.log("\nSearching for the number 100: " + list.contains(100));
 console.log("Searching for the number 545: " + list.contains(545));
 
+// Contains a value
+console.log('\n9. SEARCH FOR VALUE AND RETURN INDEX')
+console.log("--------------------------------------");
+console.log('The current list is: ');
+console.log(list.toString());
+console.log();
 
+list.find(5);
 
 
 

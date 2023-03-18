@@ -28,3 +28,4 @@ There are two classes. LinkedList is the class that represents the entire linked
     at(index)                   // print the nth element of the linked list
     pop()                       // remove the last element from the list
     contains(value)             // check the list for a value
+    find(value)                 // search for and return index of a value
