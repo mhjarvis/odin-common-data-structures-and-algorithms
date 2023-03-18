@@ -123,7 +123,7 @@ class LinkedList {
   }
 
   at(index) {
-    let count = 0;
+    let count = 1;
     let current = this.root;
 
     if(index > list.length()) {
@@ -131,7 +131,7 @@ class LinkedList {
     }
 
     if(index === 1) {
-      return this.root;
+      return current;
     }
 
     while(count < index) {
@@ -184,12 +184,18 @@ console.log(list.tail());
 // Print the nth node of the linked list
 console.log('\n6. PRINT THE NTH ELEMENT OF THE LINKED LIST')
 console.log("--------------------------------------");
+console.log(list.toString());
+console.log();
 
-console.log('...printing the 2nd element...');
-console.log('2nd element is: ' + list.at(2));
+
+console.log('...printing the 1st element...');
+console.log(list.at(1));
 
 console.log('\n...printing the 4th element...');
-console.log('4th element is: ' + list.at(4));
+console.log(list.at(4));
+
+console.log('\n...printing the 5th element...')
+console.log(list.at(5))
 
 
 
