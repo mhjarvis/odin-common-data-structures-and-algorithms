@@ -197,7 +197,12 @@ console.log(list.at(4));
 console.log('\n...printing the 5th element...')
 console.log(list.at(5))
 
-
+// Remove the last element from the list
+console.log('\n7. REMOVE THE LAST ELEMENT FROM THE LIST')
+console.log("--------------------------------------");
+console.log('The current list is: ');
+console.log(list.toString());
+console.log();
 
 
 

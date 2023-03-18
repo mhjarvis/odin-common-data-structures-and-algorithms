@@ -26,4 +26,4 @@ There are two classes. LinkedList is the class that represents the entire linked
     head()                      // print the head element of the linked list
     tail()                      // print the last element of the linked list
     at(index)                   // print the nth element of the linked list
-    
+    pop()                       // remove the last element from the list
