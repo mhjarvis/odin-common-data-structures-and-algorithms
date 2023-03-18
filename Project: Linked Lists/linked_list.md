@@ -21,5 +21,6 @@ There are two classes. LinkedList is the class that represents the entire linked
     isEmpty()                   // function checks if there are any nodes in the list
     prepend(data)               // fucntion that adds a value to the front of the list (making it root node)
     toString()                  // return a string of the linked list
-    append(data)                //
+    append(data)                // add value to the end of the linked list
     length()                    // return the size of the linked list
+    head()                      // print the head element of the linked list
