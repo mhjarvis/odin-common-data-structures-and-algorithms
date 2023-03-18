@@ -145,6 +145,10 @@ class LinkedList {
     let secondToLast = this.at(this.length() - 1);
     secondToLast.next = null;
   }
+
+  containes(value) {
+    let current 
+  }
 }
 
 console.log('\n3. PRINT PREPEND VALUES USING toString()');
@@ -213,6 +217,13 @@ list.pop();
 
 console.log('\nThe new list is: ');
 console.log(list.toString());
+
+// Contains a value
+console.log('\n7. CHECK FOR A VALUE IN THE LIST')
+console.log("--------------------------------------");
+console.log('The current list is: ');
+console.log(list.toString());
+console.log();
 
 
 
