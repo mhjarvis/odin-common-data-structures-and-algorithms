@@ -162,6 +162,9 @@ console.log("--------------------------------------");
 console.log('...printing the tail element...');
 console.log(list.tail());
 
+// Print the nth node of the linked list
+
+
 
 
 
