@@ -24,3 +24,4 @@ There are two classes. LinkedList is the class that represents the entire linked
     append(data)                // add value to the end of the linked list
     length()                    // return the size of the linked list
     head()                      // print the head element of the linked list
+    tail()                      // print the last element of the linked list

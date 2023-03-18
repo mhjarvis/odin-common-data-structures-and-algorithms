@@ -115,7 +115,11 @@ class LinkedList {
 
   // function to return the tail of the linked list
   tail() {
-    
+    let current = this.root;
+    while (current.next !== null) {
+      current = current.next;
+    }
+    return current;
   }
 }
 
@@ -156,7 +160,7 @@ console.log('\n5. PRINT THE TAIL ELEMENT OF THE LINKED LIST')
 console.log("--------------------------------------");
 
 console.log('...printing the tail element...');
-
+console.log(list.tail());
 
 
 
