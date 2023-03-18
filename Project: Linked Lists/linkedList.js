@@ -1,4 +1,4 @@
-console.log("\nPRINT THE MANUALLY BUILT LINKED LIST");
+console.log("\n1. PRINT THE MANUALLY BUILT LINKED LIST");
 console.log("--------------------------------------")
 // There will be two classes to a linked list
 
@@ -41,7 +41,7 @@ function printList(node) {
   }
 }
 
-console.log('\nPRINT A READABLE LINKED LIST')
+console.log('\n2. PRINT A READABLE LINKED LIST')
 console.log("--------------------------------------")
 console.log(printList(n1));
 
@@ -108,10 +108,16 @@ class LinkedList {
     return count;
   }
 
+  // function to return the head of the linked list
+  head() {
+    return this.root;
+  }
 
+  // function to return the tail of the linked list
+  
 }
 
-console.log('\nPRINT PREPEND VALUES USING toString()');
+console.log('\n3. PRINT PREPEND VALUES USING toString()');
 console.log("--------------------------------------");
 
 // Let prepend a few items to create a list and then print the list and length
@@ -126,7 +132,7 @@ console.log(list.toString());
 console.log('Length of this list: ' + list.length());
 
 // Appending a value and printing the new linked list
-console.log('\nPRINT LINKED LIST WITH APPENDED VALUES');
+console.log('\n4. PRINT LINKED LIST WITH APPENDED VALUES');
 console.log("--------------------------------------");
 
 console.log('...apending 77 to the list and printing...');
@@ -136,10 +142,18 @@ list.apend(77);
 console.log(list.toString());
 console.log('Length of this list: ' + list.length());
 
+// Print only the head element of the list
+console.log('\n5. PRINT THE HEAD ELEMENT OF THE LINKED LIST')
+console.log("--------------------------------------");
 
+console.log('...printing the head element...\n');
+console.log(list.head());
 
+// Print only the tail element of the list
+console.log('\n5. PRINT THE TAIL ELEMENT OF THE LINKED LIST')
+console.log("--------------------------------------");
 
-
+console.log('...printing the tail element...');
 
 
 
