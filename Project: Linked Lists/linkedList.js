@@ -140,6 +140,11 @@ class LinkedList {
     }
     return current;
   }
+
+  pop() {
+    let secondToLast = this.at(this.length() - 1);
+    secondToLast.next = null;
+  }
 }
 
 console.log('\n3. PRINT PREPEND VALUES USING toString()');
@@ -204,7 +209,10 @@ console.log('The current list is: ');
 console.log(list.toString());
 console.log();
 
+list.pop();
 
+console.log('\nThe new list is: ');
+console.log(list.toString());
 
 
 
