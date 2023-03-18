@@ -146,8 +146,16 @@ class LinkedList {
     secondToLast.next = null;
   }
 
-  containes(value) {
-    let current 
+  contains(value) {
+    let current = this.root;
+
+    while(current.next !== null) {
+      if(current.data === value) {
+        return true;
+      }
+      current = current.next;
+    }
+    return false;
   }
 }
 
@@ -219,17 +227,14 @@ console.log('\nThe new list is: ');
 console.log(list.toString());
 
 // Contains a value
-console.log('\n7. CHECK FOR A VALUE IN THE LIST')
+console.log('\n8. CHECK FOR A VALUE IN THE LIST')
 console.log("--------------------------------------");
 console.log('The current list is: ');
 console.log(list.toString());
 console.log();
 
-
-
-
-
-
+console.log("\nSearching for the number 100: " + list.contains(100));
+console.log("Searching for the number 545: " + list.contains(545));
 
 
 
