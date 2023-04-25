@@ -19,6 +19,7 @@ for (let i = 1; i < 9; i++) {
         const div = document.createElement('div');
         div.classList.add('square');
         div.id = 's' + i;
+        div.innerHTML = gameBoard[i];
         getBoardElement.appendChild(div);
     }
 
