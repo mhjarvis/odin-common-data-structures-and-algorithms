@@ -1,0 +1,20 @@
+body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.gameboard {
+    background-color: yellow;
+    width: 400px;
+    display: grid;
+    grid-template-columns: repeat(8, 50px);
+
+
+}
+
+.square {
+    height: 50px;
+    width: 50px;
+    border: 1px solid black;
+}
