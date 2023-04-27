@@ -1,3 +1,38 @@
+/*
+
+Gameboard
+
+1. Looking at using the Graph data structure.
+2. Need to create the data structure.
+    a. create function that tests wether a chess piece move will be outside the board.
+    b. create function that will go through each board space and add a array of possible moves to the graph data sstructure. for-loop?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
+
 
 let gameBoard = []
 
