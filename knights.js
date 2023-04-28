@@ -37,19 +37,29 @@ function createChessBoard() {
 function createGraph() {
 
     for (let cordinates of chessBoard) {
-        const index = chessBoard.indexOf(cordinates) + 1;
-        graph[index] = [];             // create key with empty arr in graph
+        //const index = chessBoard.indexOf(cordinates) + 1;       // index variable
+        //graph[index] = [];                                      // create key with empty arr in graph
+        console.log(chessBoard[chessBoard.indexOf(cordinates)])
 
+        let index = `[${chessBoard[chessBoard.indexOf(cordinates)]}]`;
+        graph[index] = []
         for (let move of moves) {
-            graph[index].push(move)
+
+            let testX = move[0] + cordinates[0];
+            let testY = move[1] + cordinates[1];
+
+            if (testX >= 0 && testX <= 7 && testY >= 0 && testY <= 7) {
+                graph[index].push([testX, testY]);
+            };
         }
     }
-    console.log(graph)
 }
+
 
 createChessBoard();
 createGraph()
 console.log('test')
+console.log(graph)
 
 
 /*
