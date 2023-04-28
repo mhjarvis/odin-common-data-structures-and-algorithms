@@ -39,7 +39,7 @@ function createGraph() {
     for (let cordinates of chessBoard) {
         //const index = chessBoard.indexOf(cordinates) + 1;       // index variable
         //graph[index] = [];                                      // create key with empty arr in graph
-        console.log(chessBoard[chessBoard.indexOf(cordinates)])
+        //console.log(chessBoard[chessBoard.indexOf(cordinates)])
 
         let index = `[${chessBoard[chessBoard.indexOf(cordinates)]}]`;
         graph[index] = []
@@ -55,11 +55,29 @@ function createGraph() {
     }
 }
 
+function knightsTravails(start, end) {
+
+    if (start.toString() === end.toString()) {
+        return end;
+    }
+
+
+
+
+
+
+
+
+}
+
 
 createChessBoard();
 createGraph()
-console.log('test')
+
+
 console.log(graph)
+
+console.log(knightsTravails([4, 4], [4, 4]))
 
 
 /*
