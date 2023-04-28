@@ -12,28 +12,44 @@ Gameboard
 // Create graph of the gameboard with all possible moves from a location
 
 let graph = {};
+let chessBoard = [];
+let moves = [
+    [1, 2], 
+    [1, -2], 
+    [-1, 2], 
+    [-1, -2], 
+    [2, 1], 
+    [2, -1], 
+    [-2, 1], 
+    [-2, -1]
+]
 
-function createGraph() {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    console.log(graph);
+// Create chessboard array holding all board coordinates
+function createChessBoard() {
+    for (let i = 0; i < 8; i++) {
+        for (let j = 0; j < 8; j++) {
+            chessBoard.push([i, j])
+        }
+    }
 }
 
-createGraph();
+// Create graph of all locations a knight can move to
+function createGraph() {
 
+    for (let cordinates of chessBoard) {
+        const index = chessBoard.indexOf(cordinates) + 1;
+        graph[index] = [];             // create key with empty arr in graph
 
+        for (let move of moves) {
+            graph[index].push(move)
+        }
+    }
+    console.log(graph)
+}
+
+createChessBoard();
+createGraph()
+console.log('test')
 
 
 /*
