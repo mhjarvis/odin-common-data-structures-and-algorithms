@@ -7,32 +7,36 @@ Gameboard
     a. create function that tests wether a chess piece move will be outside the board.
     b. create function that will go through each board space and add a array of possible moves to the graph data sstructure. for-loop?
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 */
 
+// Create graph of the gameboard with all possible moves from a location
+
+let graph = {};
+
+function createGraph() {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    console.log(graph);
+}
+
+createGraph();
+
+
+
+
+/*
 
 let gameBoard = []
 
@@ -103,3 +107,4 @@ function knightMoves(start, end) {
 
 
 console.log(knightMoves([3, 3], [3, 4]))
+*/
