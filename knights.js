@@ -41,7 +41,7 @@ function createGraph() {
         //graph[index] = [];                                      // create key with empty arr in graph
         //console.log(chessBoard[chessBoard.indexOf(cordinates)])
 
-        let index = `[${chessBoard[chessBoard.indexOf(cordinates)]}]`;
+        let index = cordinates;//`[${chessBoard[chessBoard.indexOf(cordinates)]}]`;
         graph[index] = []
         for (let move of moves) {
 
@@ -61,13 +61,25 @@ function knightsTravails(start, end) {
         return end;
     }
 
+    let queue = [start];
+    count = 0;
 
+    while (queue.length > 0) {
 
+        const current = queue.shift();
 
+        if (current.toString() === end.toString()) {
+            return count;
+        }
 
+        count++;
 
+        for (let neighbor of graph[current]) {
+            queue.push(neighbor);
+        }
 
-
+    }
+    return false;
 }
 
 
@@ -77,7 +89,7 @@ createGraph()
 
 console.log(graph)
 
-console.log(knightsTravails([4, 4], [4, 4]))
+console.log(knightsTravails([4, 4], [5, 7]))
 
 
 /*
