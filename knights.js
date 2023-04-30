@@ -66,7 +66,9 @@ function knightsTravails(start, end) {
 
     while (queue.length > 0) {
 
+        
         const current = queue.shift();
+        console.log(current)
 
         if (current.toString() === end.toString()) {
             return count;
