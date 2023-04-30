@@ -84,14 +84,50 @@ function knightsTravails(start, end) {
     return false;
 }
 
+function knightsShortestPath(start, end) {
+
+    let visited = [];
+    //let path = [];
+    let queue = [[start, []]];
+
+    while (queue.length > 0) {
+
+        let current = queue.shift();            // [4, 4]
+
+        for (let neighbor of graph[current[0]]) {
+
+            if (current[0].toString() === end.toString()) {
+                console.log(current[1])
+                return current[1];
+            }
+
+            let updatePath = current[1].push(current[0]);
+            queue.push([neighbor, updatePath]);
+        }
+        console.log("poop")
+        return;
+
+    }
+
+
+
+
+
+
+
+
+    return;
+}
+
 
 createChessBoard();
 createGraph()
 
 
-console.log(graph)
+//console.log(graph)
 
-console.log(knightsTravails([4, 4], [5, 7]))
+
+knightsShortestPath([4, 4], [6, 5])
 
 
 /*
