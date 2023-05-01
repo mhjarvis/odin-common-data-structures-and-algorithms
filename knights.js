@@ -54,47 +54,18 @@ function createGraph() {
     }
 }
 
-function knightsTravails(start, end) {
-
-    if (start.toString() === end.toString()) {
-        return end;
-    }
-
-    let queue = [start];
-    count = 0;
-
-    while (queue.length > 0) {
-
-        
-        const current = queue.shift();
-        console.log(current)
-
-        if (current.toString() === end.toString()) {
-            return count;
-        }
-
-        count++;
-
-        for (let neighbor of graph[current]) {
-            queue.push(neighbor);
-        }
-
-    }
-    return false;
-}
-
+// Function that does breadth-first search keeping track of moves
 function knightMoves(start, end) {
 
-    let visited = [];
-    let queue = [[start]];
+    let queue = [[start]];                  // set queue to include starting coordinate
 
-    while (queue.length > 0) {
+    while (queue.length > 0) {              // activte queue
 
-        const path = queue.shift();
-        const current = path[path.length - 1];
-        console.log(path, '\n')
+        const path = queue.shift();                     // assign first array to 'path'
+        const current = path[path.length - 1];          // get last element in array
 
-        if (current.toString() === end.toString()) {
+        if (current.toString() === end.toString()) {    // test for match
+
             console.log(`You made it in ${path.length - 1} moves! Here's your path:`);
             for (let i = 1; i < path.length; i++) {
                 console.log('   ', path[i]);
@@ -102,30 +73,21 @@ function knightMoves(start, end) {
             return;
         }
 
-        for (let neighbor of graph[current]) {
-            const newPath = [...path];     //this is not reseting
-            newPath.push(neighbor);
-            queue.push(newPath);
-           // console.log(newPath)
-            
+        for (let neighbor of graph[current]) {          // for each element that matches the graph key
+            const updatePath = [...path];               // create copy of 'path' variable
+            updatePath.push(neighbor);                  // push neighbor coordinate onto the path
+            queue.push(updatePath);                        // push new path onto the queue            
         }
-
-
-
-        
-
     }
 }
 
 
-createChessBoard();
-createGraph()
+createChessBoard();         // initialize chess board
+createGraph()               // initialize graph
 
-
-console.log(graph)
-
-
-knightMoves([4, 4], [6,8])
+knightMoves([4, 4], [6, 8])     // test
+knightMoves([5, 5], [5, 5])     // test
+knightMoves([1, 1], [8, 8])     // test
 
 
 /*
