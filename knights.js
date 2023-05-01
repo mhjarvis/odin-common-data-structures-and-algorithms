@@ -93,18 +93,26 @@ function knightsShortestPath(start, end) {
     while (queue.length > 0) {
 
         let current = queue.shift();            // [4, 4]
+        console.log('\nCurrent = ', current)
+
+        // console.log(graph[current[0]])
 
         for (let neighbor of graph[current[0]]) {
 
-            if (current[0].toString() === end.toString()) {
-                console.log(current[1])
+            console.log('\nNeighbors: ')
+            console.log(neighbor, (neighbor.toString()) === end.toString())
+
+
+
+            if (neighbor.toString() === end.toString()) {
+                console.log("found it", current)
                 return current[1];
             }
 
             let updatePath = current[1].push(current[0]);
             queue.push([neighbor, updatePath]);
         }
-        console.log("poop")
+        console.log("\npoop")
         return;
 
     }
