@@ -87,28 +87,30 @@ function knightsTravails(start, end) {
 function knightsShortestPath(start, end) {
 
     let visited = [];
-    //let path = [];
-    let queue = [ [ start, [] ] ];
+    let queue = [[start]];
 
     while (queue.length > 0) {
 
-        let current = queue.shift();            // [4, 4]
-        current[1].push(current[0])
-        console.log('\nCurrent = ', current)
+        const path = queue.shift();
+        const current = path[path.length - 1];
+        console.log(path, '\n')
 
-        if (current[0].toString() === end.toString()) {
-            console.log('FOUND IT: HERE IS YOUR PATH', current[1])
+        if (current.toString() === end.toString()) {
+            console.log('FOUND IT: HERE IS YOUR PATH', path)
             return current[1];
         }
 
-        for (let neighbors of graph[current[0]]) {
-
-            let arr = [ neighbors, [current[1]]];
-
-            queue.push(arr);
-
-            console.log(neighbors)
+        for (let neighbor of graph[current]) {
+            const newPath = [...path];     //this is not reseting
+            newPath.push(neighbor);
+            queue.push(newPath);
+           // console.log(newPath)
+            
         }
+
+
+
+        
 
     }
 }
@@ -118,10 +120,10 @@ createChessBoard();
 createGraph()
 
 
-//console.log(graph)
+console.log(graph)
 
 
-knightsShortestPath([4, 4], [1 ,1])
+knightsShortestPath([4, 4], [6,7])
 
 
 /*
