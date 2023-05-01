@@ -1,15 +1,7 @@
-/*
+/* KNIGHTS TRAVAILS
 
-Gameboard
-
-1. Looking at using the Graph data structure.
-2. Need to create the data structure.
-    a. create function that tests wether a chess piece move will be outside the board.
-    b. create function that will go through each board space and add a array of possible moves to the graph data sstructure. for-loop?
 
 */
-
-// Create graph of the gameboard with all possible moves from a location
 
 let graph = {};
 let chessBoard = [];
@@ -84,7 +76,7 @@ function knightsTravails(start, end) {
     return false;
 }
 
-function knightsShortestPath(start, end) {
+function knightMoves(start, end) {
 
     let visited = [];
     let queue = [[start]];
@@ -96,8 +88,11 @@ function knightsShortestPath(start, end) {
         console.log(path, '\n')
 
         if (current.toString() === end.toString()) {
-            console.log('FOUND IT: HERE IS YOUR PATH', path)
-            return current[1];
+            console.log(`You made it in ${path.length - 1} moves! Here's your path:`);
+            for (let i = 1; i < path.length; i++) {
+                console.log('   ', path[i]);
+            }
+            return;
         }
 
         for (let neighbor of graph[current]) {
@@ -123,7 +118,7 @@ createGraph()
 console.log(graph)
 
 
-knightsShortestPath([4, 4], [6,8])
+knightMoves([4, 4], [6,8])
 
 
 /*
