@@ -26,8 +26,8 @@ let moves = [
 
 // Create chessboard array holding all board coordinates
 function createChessBoard() {
-    for (let i = 0; i < 8; i++) {
-        for (let j = 0; j < 8; j++) {
+    for (let i = 1; i <= 8; i++) {
+        for (let j = 1; j <= 8; j++) {
             chessBoard.push([i, j])
         }
     }
@@ -48,7 +48,7 @@ function createGraph() {
             let testX = move[0] + cordinates[0];
             let testY = move[1] + cordinates[1];
 
-            if (testX >= 0 && testX <= 7 && testY >= 0 && testY <= 7) {
+            if (testX >= 1 && testX <= 8 && testY >= 1 && testY <= 8) {
                 graph[index].push([testX, testY]);
             };
         }
@@ -123,7 +123,7 @@ createGraph()
 console.log(graph)
 
 
-knightsShortestPath([4, 4], [6,7])
+knightsShortestPath([4, 4], [6,8])
 
 
 /*
