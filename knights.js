@@ -1,11 +1,22 @@
 /* KNIGHTS TRAVAILS
 
+1. Create variables:
+    a. Variable to hold the graph data structure (this will hold where a knight can move to from each space).
+    b. Variable for the chessboard (this will be an array with coordinates).
+    c. Variable for the moves a knight can make.
+2. Create function to populate the chess board array.
+3. Create function to populate the graph.
+    a. Take each space and create new array that tracks all valid moves a knight can make. 
+    b. Test to make sure only valid moves will be saved.
+    c. Moves outside the borad are invalid. 
+    d. Add these arrays to the graph data structure in the form of an adjacency list.
+4. 
 
 */
 
-let graph = {};
-let chessBoard = [];
-let moves = [
+let graph = {};                     // hold all possible moves per chess board space
+let chessBoard = [];                // coordinates of each space
+let moves = [                       // all possible moves a knight can make
     [1, 2], 
     [1, -2], 
     [-1, 2], 
@@ -28,20 +39,16 @@ function createChessBoard() {
 // Create graph of all locations a knight can move to
 function createGraph() {
 
-    for (let cordinates of chessBoard) {
-        //const index = chessBoard.indexOf(cordinates) + 1;       // index variable
-        //graph[index] = [];                                      // create key with empty arr in graph
-        //console.log(chessBoard[chessBoard.indexOf(cordinates)])
+    for (let coordinate of chessBoard) {            // cycle through each board space
 
-        let index = cordinates;//`[${chessBoard[chessBoard.indexOf(cordinates)]}]`;
-        graph[index] = []
-        for (let move of moves) {
+        graph[coordinate] = []                      // add key to graph as coordinate
 
-            let testX = move[0] + cordinates[0];
-            let testY = move[1] + cordinates[1];
+        for (let move of moves) {                   // cycle through each move
+            let testX = move[0] + coordinate[0];    // get new x coordinate
+            let testY = move[1] + coordinate[1];    // get new y coordinate
 
-            if (testX >= 1 && testX <= 8 && testY >= 1 && testY <= 8) {
-                graph[index].push([testX, testY]);
+            if (testX >= 1 && testX <= 8 && testY >= 1 && testY <= 8) {     // test that coordinates are valid
+                graph[coordinate].push([testX, testY]);                     // push coordinate to graph
             };
         }
     }
