@@ -88,43 +88,29 @@ function knightsShortestPath(start, end) {
 
     let visited = [];
     //let path = [];
-    let queue = [[start, []]];
+    let queue = [ [ start, [] ] ];
 
     while (queue.length > 0) {
 
         let current = queue.shift();            // [4, 4]
+        current[1].push(current[0])
         console.log('\nCurrent = ', current)
 
-        // console.log(graph[current[0]])
-
-        for (let neighbor of graph[current[0]]) {
-
-            console.log('\nNeighbors: ')
-            console.log(neighbor, (neighbor.toString()) === end.toString())
-
-
-
-            if (neighbor.toString() === end.toString()) {
-                console.log("found it", current)
-                return current[1];
-            }
-
-            let updatePath = current[1].push(current[0]);
-            queue.push([neighbor, updatePath]);
+        if (current[0].toString() === end.toString()) {
+            console.log('FOUND IT: HERE IS YOUR PATH', current[1])
+            return current[1];
         }
-        console.log("\npoop")
-        return;
+
+        for (let neighbors of graph[current[0]]) {
+
+            let arr = [ neighbors, [current[1]]];
+
+            queue.push(arr);
+
+            console.log(neighbors)
+        }
 
     }
-
-
-
-
-
-
-
-
-    return;
 }
 
 
@@ -135,7 +121,7 @@ createGraph()
 //console.log(graph)
 
 
-knightsShortestPath([4, 4], [6, 5])
+knightsShortestPath([4, 4], [1 ,1])
 
 
 /*
