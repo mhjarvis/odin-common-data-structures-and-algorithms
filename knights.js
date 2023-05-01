@@ -88,4 +88,3 @@ createGraph()               // initialize graph
 knightMoves([4, 4], [6, 8])     // test
 knightMoves([5, 5], [5, 5])     // test
 knightMoves([1, 1], [8, 8])     // test
-
